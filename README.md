@@ -8,7 +8,7 @@ Requirements
 
 In order to use this plugin, you need to install [spotify-cli-linux](https://github.com/pwittchen/spotify-cli-linux) program.
 
-You can to it with the following command:
+You can do it with the following command:
 
 ```
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/pwittchen/spotify-cli-linux/master/install.sh)"
