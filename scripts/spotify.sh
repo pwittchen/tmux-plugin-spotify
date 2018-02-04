@@ -6,7 +6,7 @@ source "$CURRENT_DIR/helpers.sh"
 
 print_spotify_song() {
   if is_linux; then
-    spotify-cli --status-short
+    spotifycli --status-short
   else
     echo "tmux-plugin-spotify works only on Linux"
   fi
