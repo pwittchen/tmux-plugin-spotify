@@ -4,8 +4,20 @@ CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 source "$CURRENT_DIR/scripts/helpers.sh"
 
-spotify_song="#($CURRENT_DIR/scripts/spotify.sh)"
+spotify_status="#($CURRENT_DIR/scripts/spotify_status.sh)"
+spotify_status_interpolation="\#{spotify_status}"
+
+spotify_song="#($CURRENT_DIR/scripts/spotify_song.sh)"
 spotify_song_interpolation="\#{spotify_song}"
+
+spotify_artist="#($CURRENT_DIR/scripts/spotify_artist.sh)"
+spotify_artist_interpolation="\#{spotify_artist}"
+
+spotify_album="#($CURRENT_DIR/scripts/spotify_album.sh)"
+spotify_album_interpolation="\#{spotify_album}"
+
+spotify_playback="#($CURRENT_DIR/scripts/spotify_playback.sh)"
+spotify_playback_interpolation="\#{spotify_playback}"
 
 set_tmux_option() {
   local option="$1"
@@ -15,8 +27,12 @@ set_tmux_option() {
 
 do_interpolation() {
   local string=$1
-  local spotify_song_interpolated=${string/$spotify_song_interpolation/$spotify_song}
-  echo $spotify_song_interpolated
+  local string=${string/$spotify_status_interpolation/$spotify_status}
+  local string=${string/$spotify_song_interpolation/$spotify_song}
+  local string=${string/$spotify_artist_interpolation/$spotify_artist}
+  local string=${string/$spotify_album_interpolation/$spotify_album}
+  local string=${string/$spotify_playback_interpolation/$spotify_playback}
+  echo "$string"
 }
 
 update_tmux_option() {
