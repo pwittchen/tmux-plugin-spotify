@@ -11,7 +11,7 @@ In order to use this plugin, you need to install [spotify-cli-linux](https://git
 You can do it with the following command:
 
 ```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/pwittchen/spotify-cli-linux/master/install.sh)"
+pip install spotify-cli-linux
 ```
 
 Installation
