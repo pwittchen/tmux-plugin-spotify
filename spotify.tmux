@@ -7,6 +7,9 @@ source "$CURRENT_DIR/scripts/helpers.sh"
 spotify_status="#($CURRENT_DIR/scripts/spotify_status.sh)"
 spotify_status_interpolation="\#{spotify_status}"
 
+spotify_status_full="#($CURRENT_DIR/scripts/spotify_status_full.sh)"
+spotify_status_full_interpolation="\#{spotify_status_full}"
+
 spotify_song="#($CURRENT_DIR/scripts/spotify_song.sh)"
 spotify_song_interpolation="\#{spotify_song}"
 
@@ -28,6 +31,7 @@ set_tmux_option() {
 do_interpolation() {
   local string=$1
   local string=${string/$spotify_status_interpolation/$spotify_status}
+  local string=${string/$spotify_status_full_interpolation/$spotify_status_full}
   local string=${string/$spotify_song_interpolation/$spotify_song}
   local string=${string/$spotify_artist_interpolation/$spotify_artist}
   local string=${string/$spotify_album_interpolation/$spotify_album}

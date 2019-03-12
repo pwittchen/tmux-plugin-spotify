@@ -12,11 +12,11 @@ get_tmux_option() {
 }
 
 is_osx() {
-  [ $(uname) == "Darwin" ]
+  [ "$(uname)" == "Darwin" ]
 }
 
 is_linux() {
-  [ $(uname) == "Linux" ]
+  [ "$(uname)" == "Linux" ]
 }
 
 command_exists() {

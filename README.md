@@ -40,7 +40,7 @@ In order to see currently played Spotify song via this tmux plugin, add the foll
 You can also set more options like:
 
 ```
-#{spotify_status}, #{spotify_song}, #{spotify_artist}, #{spotify_album}, #{spotify_playback}
+#{spotify_status_full}, #{spotify_status}, #{spotify_song}, #{spotify_artist}, #{spotify_album}, #{spotify_playback}
 ```
 
 References
