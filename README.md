@@ -43,6 +43,18 @@ You can also set more options like:
 #{spotify_status_full}, #{spotify_status}, #{spotify_song}, #{spotify_artist}, #{spotify_album}, #{spotify_playback}
 ```
 
+Available Options
+----------------
+
+- spotify_status
+- spotify_status_full
+- spotify_song
+- spotify_song_full
+- spotify_artist
+- spotify_artist_full
+- spotify_album
+- spotify_playback
+
 References
 ----------
 - https://github.com/tmux-plugins
