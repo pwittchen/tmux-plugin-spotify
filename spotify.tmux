@@ -13,8 +13,14 @@ spotify_status_full_interpolation="\#{spotify_status_full}"
 spotify_song="#($CURRENT_DIR/scripts/spotify_song.sh)"
 spotify_song_interpolation="\#{spotify_song}"
 
+spotify_song_full="#($CURRENT_DIR/scripts/spotify_song_full.sh)"
+spotify_song_full_interpolation="\#{spotify_song_full}"
+
 spotify_artist="#($CURRENT_DIR/scripts/spotify_artist.sh)"
 spotify_artist_interpolation="\#{spotify_artist}"
+
+spotify_artist_full="#($CURRENT_DIR/scripts/spotify_artist_full.sh)"
+spotify_artist_full_interpolation="\#{spotify_artist_full}"
 
 spotify_album="#($CURRENT_DIR/scripts/spotify_album.sh)"
 spotify_album_interpolation="\#{spotify_album}"
@@ -33,7 +39,9 @@ do_interpolation() {
   local string=${string/$spotify_status_interpolation/$spotify_status}
   local string=${string/$spotify_status_full_interpolation/$spotify_status_full}
   local string=${string/$spotify_song_interpolation/$spotify_song}
+  local string=${string/$spotify_song_full_interpolation/$spotify_song_full}
   local string=${string/$spotify_artist_interpolation/$spotify_artist}
+  local string=${string/$spotify_artist_full_interpolation/$spotify_artist_full}
   local string=${string/$spotify_album_interpolation/$spotify_album}
   local string=${string/$spotify_playback_interpolation/$spotify_playback}
   echo "$string"
